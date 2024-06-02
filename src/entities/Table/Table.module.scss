@@ -1,3 +1,51 @@
-.container {
+@import 'app/styles/themes/light';
+@import 'app/styles/themes/dark';
+
+.wrapper {
   display: grid;
+  grid-gap: 1px;
+  background-color: var(--lines);
+  grid-template-columns: repeat(7, 43px 125px);
+  grid-template-rows: repeat(17, 60px);
+}
+
+.wrapper > div {
+  background-color: var(--bg-color);
+}
+
+.item {
+
+}
+
+.hour {
+  padding-left: 6px;
+  padding-top: 3px;
+  text-align: start;
+  //grid-row: span 2;
+}
+
+.header {
+  position: sticky;
+  padding: 12px;
+  grid-row: 1;
+  grid-column: span 2;
+}
+
+.resizeHandle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0;
+  width: 3px;
+  cursor: col-resize;
+}
+
+.resizeHandle:hover {
+  opacity: 0.5;
+}
+
+.header:hover .resizeHandle {
+  opacity: 0.3;
 }
